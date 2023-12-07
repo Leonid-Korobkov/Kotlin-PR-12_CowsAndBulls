@@ -16,7 +16,7 @@ fun main() {
         val guess = readln()
 
         // Проверка корректности ввода (4-значное число из цифр).
-        if (guess != null && guess.length == 4 && guess.all { it.isDigit() }) {
+        if (guess.length == 4 && guess.all { it.isDigit() }) {
             // Увеличение счетчика попыток.
             countAttempts++
             // Оценка догадки и вывод результатов.
@@ -29,7 +29,6 @@ fun main() {
                 break
             }
         } else {
-            // Вывод сообщения об ошибке ввода.
             println("Введите корректное 4-значное число!")
         }
     }
